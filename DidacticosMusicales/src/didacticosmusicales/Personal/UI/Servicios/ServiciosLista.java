@@ -141,6 +141,9 @@ public class ServiciosLista extends javax.swing.JPanel {
                     if(eliminacionT.isExitoso()){
                         ((DefaultTableModel)table.getModel()).removeRow(modelRow);
                     }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Hubo un problema al realizar la eliminación","Error",JOptionPane.ERROR_MESSAGE);
+                    }
                 }
             }
         };
@@ -218,9 +221,9 @@ public class ServiciosLista extends javax.swing.JPanel {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addComponent(btnNuevoServicio)
-                .addGap(18, 18, 18)
+                .addGap(15, 15, 15)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE))
         );
 
@@ -230,7 +233,7 @@ public class ServiciosLista extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelServicios, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(panelServicios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

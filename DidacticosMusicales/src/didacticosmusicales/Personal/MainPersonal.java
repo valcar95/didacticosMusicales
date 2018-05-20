@@ -7,13 +7,12 @@ import didacticosmusicales.Personal.UI.Personal;
 import javax.swing.*;
 import java.util.List;
 
-public class Main {
+public class MainPersonal {
     public static void main (String[] arg){
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
                 JFrame jframe = new Personal();
-                jframe.setSize(700,400);
                 jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 jframe.setVisible(true);
                 jframe.setExtendedState( jframe.getExtendedState()|JFrame.MAXIMIZED_BOTH );

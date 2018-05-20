@@ -1,5 +1,7 @@
 package didacticosmusicales.Personal.Aplicacion.Implementaciones;
 
+import didacticosmusicales.Personal.Aplicacion.Adaptadores.Implementaciones.MaterialesAdaptador;
+import didacticosmusicales.Personal.Aplicacion.Adaptadores.Interfaces.IMaterialesAdaptador;
 import didacticosmusicales.Personal.Aplicacion.Interfaces.IMaterialServicioCtrl;
 import didacticosmusicales.Personal.Aplicacion.Utilidades.Response;
 import didacticosmusicales.Personal.Dominio.Entidades.Material;
@@ -10,15 +12,18 @@ import java.util.List;
 
 public class MaterialServicioCtrl extends BaseCtrl implements IMaterialServicioCtrl {
     private IMaterialServicioRepositorio materialServicioRepositorio;
+    private IMaterialesAdaptador materialesAdaptador;
     public MaterialServicioCtrl(){
         this.materialServicioRepositorio= new MaterialServicioRepositorio();
+        this.materialesAdaptador= new MaterialesAdaptador();
     }
 
     @Override
     public Response<List<Material>> ObtenerMaterialesServicioPorIdServicio(int idServicio) {
         Response<List<Material>> result= new Response<List<Material>>();
         try{
-            result.setEntidad(this.materialServicioRepositorio.ObtenerMaterialesServicioPorIdServicio(idServicio));
+            List<Integer> idsMateriales=this.materialServicioRepositorio.ObtenerIdsMaterialesServicioPorIdServicio(idServicio);
+            result.setEntidad(this.materialesAdaptador.ObtenerMaterialesPorIds(idsMateriales));
         }
         catch(Exception e){
             this.RegistrarLog(e);

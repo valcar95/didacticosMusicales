@@ -105,6 +105,9 @@ public class TiposClienteLista extends javax.swing.JPanel {
                     if(eliminacionT.isExitoso()){
                         ((DefaultTableModel)table.getModel()).removeRow(modelRow);
                     }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Hubo un problema al realizar la eliminación","Error",JOptionPane.ERROR_MESSAGE);
+                    }
                 }
             }
         };
@@ -169,9 +172,9 @@ public class TiposClienteLista extends javax.swing.JPanel {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(4, 4, 4)
+                .addGap(30, 30, 30)
                 .addComponent(btnNuevoTipoCliente)
-                .addGap(18, 18, 18)
+                .addGap(15, 15, 15)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE))
         );
 

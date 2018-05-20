@@ -18,8 +18,8 @@ public class MaterialServicioRepositorio extends RepositorioBase implements IMat
     }
 
     @Override
-    public List<Material> ObtenerMaterialesServicioPorIdServicio(int idServicio) throws Exception {
-        List<Material> result= new ArrayList<Material>();
+    public List<Integer> ObtenerIdsMaterialesServicioPorIdServicio(int idServicio) throws Exception {
+        List<Integer> result= new ArrayList<Integer>();
         Connection con=null;
         PreparedStatement stmt=null;
         ResultSet rs=null;
@@ -34,7 +34,7 @@ public class MaterialServicioRepositorio extends RepositorioBase implements IMat
                 int idMaterial=rs.getInt("IdMaterial");
                 idsMateriales.add(idMaterial);
             }
-            result=this.materialRepositorio.ObtenerMaterialesPorIds(idsMateriales);
+            result=idsMateriales;
         }
         catch (Exception e) {
             throw e;

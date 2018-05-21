@@ -4,7 +4,7 @@ import didacticosmusicales.Personal.Aplicacion.Interfaces.ITrabajadorCtrl;
 import didacticosmusicales.Personal.Aplicacion.Utilidades.Response;
 import didacticosmusicales.Personal.Dominio.Entidades.Trabajador;
 import didacticosmusicales.Personal.Dominio.InterfacesRepositorios.ITrabajadorRepositorio;
-import didacticosmusicales.Personal.Repositorio.TrabajadorRepositorio;
+import didacticosmusicales.Personal.Infraestructura.Repositorio.TrabajadorRepositorio;
 
 import java.util.List;
 

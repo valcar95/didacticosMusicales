@@ -1,4 +1,4 @@
-package didacticosmusicales.Personal.Repositorio;
+package didacticosmusicales.Personal.Infraestructura.Repositorio;
 
 import didacticosmusicales.Personal.Dominio.Entidades.HorarioLaboral;
 import didacticosmusicales.Personal.Dominio.Entidades.Trabajador;

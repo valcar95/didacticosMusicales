@@ -4,7 +4,7 @@ import didacticosmusicales.Personal.Aplicacion.Interfaces.IClienteCtrl;
 import didacticosmusicales.Personal.Aplicacion.Utilidades.Response;
 import didacticosmusicales.Personal.Dominio.Entidades.Cliente;
 import didacticosmusicales.Personal.Dominio.InterfacesRepositorios.IClienteRepositorio;
-import didacticosmusicales.Personal.Repositorio.ClienteRepositorio;
+import didacticosmusicales.Personal.Infraestructura.Repositorio.ClienteRepositorio;
 
 import java.util.List;
 

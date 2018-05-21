@@ -1,7 +1,7 @@
 package didacticosmusicales.Personal;
 import didacticosmusicales.Personal.Dominio.Entidades.HorarioLaboral;
 import didacticosmusicales.Personal.Dominio.Entidades.Trabajador;
-import didacticosmusicales.Personal.Repositorio.TrabajadorRepositorio;
+import didacticosmusicales.Personal.Infraestructura.Repositorio.TrabajadorRepositorio;
 import didacticosmusicales.Personal.UI.Personal;
 
 import javax.swing.*;

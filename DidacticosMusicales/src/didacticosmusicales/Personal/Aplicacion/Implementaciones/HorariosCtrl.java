@@ -4,7 +4,7 @@ import didacticosmusicales.Personal.Aplicacion.Interfaces.IHorariosCtrl;
 import didacticosmusicales.Personal.Aplicacion.Utilidades.Response;
 import didacticosmusicales.Personal.Dominio.Entidades.HorarioLaboral;
 import didacticosmusicales.Personal.Dominio.InterfacesRepositorios.IHorarioRepositorio;
-import didacticosmusicales.Personal.Repositorio.HorariosRepositorio;
+import didacticosmusicales.Personal.Infraestructura.Repositorio.HorariosRepositorio;
 
 import java.util.List;
 

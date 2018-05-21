@@ -6,7 +6,7 @@ import didacticosmusicales.Personal.Aplicacion.Interfaces.IMaterialServicioCtrl;
 import didacticosmusicales.Personal.Aplicacion.Utilidades.Response;
 import didacticosmusicales.Personal.Dominio.Entidades.Material;
 import didacticosmusicales.Personal.Dominio.InterfacesRepositorios.IMaterialServicioRepositorio;
-import didacticosmusicales.Personal.Repositorio.MaterialServicioRepositorio;
+import didacticosmusicales.Personal.Infraestructura.Repositorio.MaterialServicioRepositorio;
 
 import java.util.List;
 

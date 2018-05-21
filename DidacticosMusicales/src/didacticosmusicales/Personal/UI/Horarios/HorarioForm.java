@@ -57,21 +57,18 @@ public class HorarioForm extends javax.swing.JFrame {
         if(respuesta.isExitoso()){
             HorarioLaboral h=respuesta.getEntidad();
             this.txtDescripcion.setText(h.getDescripcion());
-            this.LlenarCombosHorarios(this.comboHoraInicio,this.comboMinutosInicio,this.comboAmPmInicio,h.getHoraInicio());
-            this.LlenarCombosHorarios(this.comboHoraFin,this.comboMinutosFin,this.comboAmPmFin,h.getHoraFin());
+            this.LlenarCombosHorarios(h);
         }
     }
 
-    private void LlenarCombosHorarios(JComboBox cHora, JComboBox cMinutos, JComboBox cAmPm, String hora){
-        String[] partesHora=hora.trim().split(":");
-        if(partesHora.length==2){
-            String[] partesHora2=partesHora[1].split(" ");
-            if(partesHora2.length==2){
-                this.PreseleccionarCombo(cHora,partesHora[0]);
-                this.PreseleccionarCombo(cMinutos,partesHora2[0]);
-                this.PreseleccionarCombo(cAmPm,partesHora2[1]);
-            }
-        }
+    private void LlenarCombosHorarios(HorarioLaboral h){
+        this.PreseleccionarCombo(this.comboHoraInicio,String.valueOf(h.ObtenerHoraInicio()));
+        this.PreseleccionarCombo(this.comboMinutosInicio,String.valueOf(h.ObtenerMinutosInicio()));
+        this.PreseleccionarCombo(this.comboAmPmInicio,h.ObtenerAmPmInicio());
+        
+        this.PreseleccionarCombo(this.comboHoraFin,String.valueOf(h.ObtenerHoraFin()));
+        this.PreseleccionarCombo(this.comboMinutosFin,String.valueOf(h.ObtenerMinutosFin()));
+        this.PreseleccionarCombo(this.comboAmPmFin,h.ObtenerAmPmFin());
     }
 
     private void PreseleccionarCombo(JComboBox combo, String valor){

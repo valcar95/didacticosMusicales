@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.util.List;
 
 public class MainPersonal {
-    public static void main (String[] arg){
+    public static void AbrirModuloPersonal (){
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {

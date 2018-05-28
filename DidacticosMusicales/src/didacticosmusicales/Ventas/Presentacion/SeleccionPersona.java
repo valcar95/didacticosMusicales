@@ -6,6 +6,11 @@
 package didacticosmusicales.Ventas.Presentacion;
 
 import java.awt.Frame;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import didacticosmusicales.Ventas.Infraestructura.ClienteDAO;
+import didacticosmusicales.Ventas.Modelo.ClientePrueba;
+import didacticosmusicales.Ventas.Aplicacion.Controller;
 
 /**
  *

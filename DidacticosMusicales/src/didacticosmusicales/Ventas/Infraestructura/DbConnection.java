@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * @author Diego
  */
 public class DbConnection {
-    static String bd = "codejavu";
+    static String bd = "dbmoduloventas";
     static String login = "root";
     static String password = "";
     static String url = "jdbc:mysql://localhost/"+bd;
